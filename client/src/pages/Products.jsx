@@ -230,7 +230,7 @@ const Products = () => {
       <div className=" w-full flex  justify-between items-center mb-6">
         <h1 className=" text-xl font-semibold  ">Products </h1>
         <Link to={"/dashboard?tab=addProduct"} className=" text-sm">
-          <div className=" text-[13px] md:text-xl flex items-center gap-2 p-2 md:py-3 px-2 md:px-4 text-center bg-black rounded-lg cursor-pointer border text-white transition duration-500 hover:bg-white uppercase  hover:border-black hover:text-black">
+          <div className=" text-[13px] md:text-base flex items-center gap-2 p-2 md:py-3 px-2 md:px-4 text-center bg-black rounded-lg cursor-pointer border text-white transition duration-500 hover:bg-white uppercase  hover:border-black hover:text-black">
             <CiCirclePlus className=" text-xl    font-semibold " /> Add Product
           </div>
         </Link>
