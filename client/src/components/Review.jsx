@@ -99,7 +99,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
             <div>
               <ReactStars
                 count={5}
-                size={30}
+                size={20}
                 edit={false}
                 value={4}
                 activeColor="black"
@@ -112,7 +112,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
           {currentUser ? (
             <div
               onClick={() => setShowCard(true)}
-              className="text-[14px] md:text-[16px]  border-b-2   transition duration-500 cursor-pointer  border-black"
+              className="text-[12px] md:text-[16px]  border-b-2   transition duration-500 cursor-pointer  border-black"
             >
               Write A Comment
             </div>

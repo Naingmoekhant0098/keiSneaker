@@ -51,10 +51,10 @@ const AddProduct = () => {
     },
   ];
   const categories = [
-    { value: "Man", label: "Man" },
-    { value: "Woman", label: "Woman" },
-    { value: "Unisex", label: "Unisex" },
-    { value: "Kid", label: "Kid" },
+    { value: "men", label: "Man" },
+    { value: "women", label: "Woman" },
+    { value: "unisex", label: "Unisex" },
+    { value: "kids", label: "Kid" },
   ];
   const collections = [
     { value: "air force 1", label: "Air force 1" },
