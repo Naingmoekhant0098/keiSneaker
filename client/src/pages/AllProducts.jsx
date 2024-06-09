@@ -22,7 +22,7 @@ import { RxCross2 } from "react-icons/rx";
 import AddCard from "../components/AddCard";
 import { useSelector } from "react-redux";
 
-const AllProducts = () => {
+const AllProducts = ({setShowAuth}) => {
   const { currentUser } = useSelector((state) => state.user);
   const [shoes, setShoes] = useState(null);
   const [showCard, setShowCard] = useState(false);
