@@ -33,7 +33,7 @@ const OrderTable = ({ data }) => {
     <div className=" shadow bg-slate-100 p-4 border border-slate-400  border-dashed rounded-lg">
       <div className=" flex items-center justify-between pb-2  ">
         <div className=" text-[14px]">
-          <div> #{od?._id}</div>
+          <div> #{data}</div>
           <div className=" opacity-80">
             Placed On {moment(od?.createdAt).format("ll")}
           </div>

@@ -16,7 +16,7 @@ const Orders = () => {
       </div>
       <div className="">
         {orders &&
-          orders.map((od, index) => {
+          orders?.map((od, index) => {
             return <OrderTable data={od} key={index} />;
           })}
       </div>
