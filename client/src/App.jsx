@@ -39,7 +39,7 @@ const App = () => {
       
         <Route path="/" element={<Home  setShowAuth={setShowAuth}/>} />
         <Route path="/shop/:slug" element={<Detail setShowAuth={setShowAuth}/>} />
-        <Route path="/shops"  element={<AllProducts />} />
+        <Route path="/shops"  element={<AllProducts setShowAuth={setShowAuth} />} />
         <Route element={<PreventUser />}>
           <Route path="/dashboard" element={<Dashboard />}></Route>
         </Route>
