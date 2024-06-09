@@ -18,6 +18,7 @@ const OrderTable = ({ data }) => {
             withCredentials: true,
           }
         );
+        
 
         if (ress.status === 200) {
           setOrder(ress.data.orders[0]);
