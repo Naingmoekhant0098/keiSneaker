@@ -182,12 +182,12 @@ const Home = ({ setShowAuth }) => {
               spaceBetween: 50,
             },
           }}
-          className="  w-full h-full pl-4 md:pl-0   dess tracking-wide"
+          className="  w-full h-full pl-4 md:pl-0  dess tracking-wide"
         >
           <SwiperSlide className="">
             <img
-              src="/nike.jpg"
-              className=" w-[90px]  md:w-[130px] h-[70px] scale-150 mix-blend-multiply"
+              src="/pngegg.png"
+              className=" w-[90px]  md:w-[120px] h-[70px]  mix-blend-multiply"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -231,14 +231,14 @@ const Home = ({ setShowAuth }) => {
           </SwiperSlide>
           <SwiperSlide className=" scale-100">
             <img
-              src="/the-north-face-1.svg"
-              className="w-[80px]  md:w-[130px] h-[70px] scale-150"
+              src="/pngegg (1).png"
+              className="w-[80px]  md:w-[130px] h-[80px] "
             />
           </SwiperSlide>
           <SwiperSlide className="">
             <img
-              src="/vans-3.svg"
-              className="w-[80px]  md:w-[130px] h-[70px]"
+              src="/pngegg (2).png"
+              className="w-[80px]  md:w-[130px] h-[80px]"
             />
           </SwiperSlide>
         </Swiper>

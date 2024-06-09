@@ -121,7 +121,7 @@ const Nav = ({ setShowAuth }) => {
           </Link>
         </div>
         <div className=" flex items-center    gap-0 md:gap-4">
-          <div className={` absolute md:relative  overflow-hidden bg-white  px-3 md:px-0  right-0 md:right-0 top-20 md:top-0 w-full md:w-auto  md:block ${showSearch ? 'block' : 'hidden'}`}>
+          <div className={` absolute md:relative  overflow-hidden bg-white  px-3 md:px-0  right-0 md:right-0  top-[70px] py-4 md:top-0 w-full md:w-auto  md:block ${showSearch ? 'block' : 'hidden'}`}>
             <CiSearch
               className=" absolute z-10 top-0 left-4 md:left-1 h-full   cursor-pointer     p-2  rounded-lg"
               style={{ fontSize: "40px" }}

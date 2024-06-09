@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const ShopCat = () => {
   return (
-    <div className="max-w-7xl mx-auto my-8 flex flex-col md:p-3 px-5">
-      <h1 className=" mb-6 text-2xl md:text-3xl font-semibold uppercase">
+    <div className="max-w-7xl mx-auto my-8 flex flex-col md:p-3">
+      <h1 className=" mb-6 text-2xl md:text-3xl font-semibold uppercase md:p-0 px-5 md:block hidden">
         Shop By Category
       </h1>
       <div className="flex flex-col md:flex-row gap-0 md:gap-4  ">

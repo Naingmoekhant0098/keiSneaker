@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const DisSection = () => {
   return (
@@ -12,9 +13,11 @@ const DisSection = () => {
             <div className=' mt-6 w-full text-center md:text-left  md:w-2/3 text-[16px]'>Find various styles for shoes that everyone look for</div>
 
             {/* <div className=' mt-6 cursor-pointer flex  text-base   gap-3 font-medium hover:border-b-2 border-black w-28'><span>Shop Now</span> <FaArrowRight /></div> */}
+            <Link to={'/shops'} className=' mt-6'>
             <div className="mt-5 shadow-md text-sm bg-white text-black p-3  rounded-full inline max-w-24  cursor-pointer ">
               Shop Now
             </div>
+            </Link>
         </div>
     </div>
   )

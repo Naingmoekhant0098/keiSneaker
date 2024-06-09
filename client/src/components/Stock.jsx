@@ -63,7 +63,7 @@ const Stock = () => {
     <div>
       <div className=" max-w-7xl mx-auto md:p-3 flex flex-col mb-10 mt-10 md:px-2 px-5">
         <div className=" flex  mb-6 items-center justify-between">
-          <h1 className=" text-xl md:text-3xl font-semibold uppercase">
+          <h1 className=" text-2xl md:text-3xl font-semibold uppercase">
             Stock Now
           </h1>
           <Link to={"/shops"}>
