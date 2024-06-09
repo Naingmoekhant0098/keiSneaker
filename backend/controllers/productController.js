@@ -40,7 +40,6 @@ exports.addProduct = async (req, res, next) => {
     console.log(error.message);
   }
 };
-
 exports.getProducts = async (req, res, next) => {
   try {
     const limit = req.query.limit || 6;
