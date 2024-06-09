@@ -51,7 +51,7 @@ const Detail = ({ setShowAuth }) => {
   useEffect(() => {
     const fetchUser = async () => {
       const rest = await axios.get(
-        `http://localhost:3000/user/getUsers?userId=${currentUser?._id}`
+        `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${currentUser?._id}`
       );
       if (rest.status == 200) {
         setUser(rest.data.users[0]);
@@ -97,7 +97,7 @@ const Detail = ({ setShowAuth }) => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getProducts?slug=${slug}`,
+          `https://keisneaker-8da6.onrender.com/product/getProducts?slug=${slug}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -135,7 +135,7 @@ const Detail = ({ setShowAuth }) => {
     const fetchComment = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getComments/${data?._id}`,
+          `https://keisneaker-8da6.onrender.com/product/getComments/${data?._id}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -157,7 +157,7 @@ const Detail = ({ setShowAuth }) => {
    if(comment){
     try {
       const ress = await axios.post(
-        "http://localhost:3000/product/addComment",
+        "https://keisneaker-8da6.onrender.com/product/addComment",
         { userId: currentUser, postId: data._id, comment: comment },
         {
           headers: { "Content-Type": "application/json" },

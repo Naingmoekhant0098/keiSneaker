@@ -11,7 +11,7 @@ const WatchListCard = ({ id,user,setClickData,setShowCard,setUser }) => {
     const fetchData = async () => {
       try {
         const ress = await axios.get(
-          `http://localhost:3000/product/getProducts?productId=${id}`,
+          `https://keisneaker-8da6.onrender.com/product/getProducts?productId=${id}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -35,7 +35,7 @@ const WatchListCard = ({ id,user,setClickData,setShowCard,setUser }) => {
 
     try {
       const resData = await axios.put(
-        `http://localhost:3000/user/addWatchlist`,
+        `https://keisneaker-8da6.onrender.com/user/addWatchlist`,
         { postId: id, userId: currentUser?._id },
         {
           headers: { "Content-Type": "application/json" },

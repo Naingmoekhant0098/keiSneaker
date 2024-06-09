@@ -198,7 +198,7 @@ const AddProduct = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/addProduct",
+        "https://keisneaker-8da6.onrender.com/product/addProduct",
         { ...data, images: images },
         {
           headers: { "Content-Type": "application/json" },

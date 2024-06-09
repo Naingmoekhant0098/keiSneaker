@@ -42,7 +42,7 @@ const Overview = () => {
   useEffect(() => {
     const serchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/order/getOrders?order='desc'`, {
+        const res = await axios.get(`https://keisneaker-8da6.onrender.com/order/getOrders?order='desc'`, {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         });
@@ -70,7 +70,7 @@ const Overview = () => {
     const serchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/user/getUsers?order='desc'`,
+          `https://keisneaker-8da6.onrender.com/user/getUsers?order='desc'`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,

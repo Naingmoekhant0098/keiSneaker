@@ -28,7 +28,7 @@ const Comment = ({
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/user/getUsers?userId=${data?.userId}`,
+          `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${data?.userId}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,

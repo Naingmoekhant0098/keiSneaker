@@ -194,7 +194,7 @@ const EditProduct = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getProducts?slug=${editId}`,
+          `https://keisneaker-8da6.onrender.com/product/getProducts?slug=${editId}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -214,7 +214,7 @@ const EditProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/product/editProduct/${data?._id}`,
+        `https://keisneaker-8da6.onrender.com/product/editProduct/${data?._id}`,
         { ...data, images: images , description : quillData },
         {
           headers: { "Content-Type": "application/json" },

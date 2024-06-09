@@ -12,7 +12,7 @@ const Wishlist = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const rest = await axios.get(
-        `http://localhost:3000/user/getUsers?userId=${currentUser?._id}`
+        `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${currentUser?._id}`
       );
       if (rest.status == 200) {
         setUser(rest.data.users[0]);

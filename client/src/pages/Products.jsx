@@ -80,7 +80,7 @@ const Products = () => {
     try {
       setShowLoad(true);
       const res = await axios.get(
-        `http://localhost:3000/product/getProducts?name=${searchTerm}&status=${orderSta}&date=${chooseDate}&order=${order}&startIndex=${shoes.length}`,
+        `https://keisneaker-8da6.onrender.com/product/getProducts?name=${searchTerm}&status=${orderSta}&date=${chooseDate}&order=${order}&startIndex=${shoes.length}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -103,7 +103,7 @@ const Products = () => {
       try {
         setShowLoad(true);
         const res = await axios.get(
-          `http://localhost:3000/product/getProducts?name=${searchTerm}&date=${chooseDate}&status=${orderSta}&order=${order}`,
+          `https://keisneaker-8da6.onrender.com/product/getProducts?name=${searchTerm}&date=${chooseDate}&status=${orderSta}&order=${order}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -134,7 +134,7 @@ const Products = () => {
   const deleteUserHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/product/deleteProduct/${deleteItem}`,
+        `https://keisneaker-8da6.onrender.com/product/deleteProduct/${deleteItem}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -156,7 +156,7 @@ const Products = () => {
     }
     try {
       const res = await axios.put(
-        `http://localhost:3000/product/addDiscount`,
+        `https://keisneaker-8da6.onrender.com/product/addDiscount`,
         { id: disId, discount: discount, discountPrice: discountPrice },
         {
           headers: { "Content-Type": "application/json" },
@@ -184,7 +184,7 @@ const Products = () => {
   const handleStock = async (id, status) => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/product/stockProduct/${id}?status=${status}`,
+        `https://keisneaker-8da6.onrender.com/product/stockProduct/${id}?status=${status}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,

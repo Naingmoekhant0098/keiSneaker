@@ -60,7 +60,7 @@ const Auth = ({ setShowAuth }) => {
     }
     dispatch(signUpStart());
     try {
-      const ress = await axios.post("http://localhost:3000/sign-up", data, {
+      const ress = await axios.post("https://keisneaker-8da6.onrender.com/sign-up", data, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
@@ -84,7 +84,7 @@ const Auth = ({ setShowAuth }) => {
     try {
       dispatch(signInStart());
       const ress = await axios.post(
-        "http://localhost:3000/sign-in",
+        "https://keisneaker-8da6.onrender.com/sign-in",
         loginData,
         {
           headers: { "Content-Type": "application/json" },
@@ -118,7 +118,7 @@ const Auth = ({ setShowAuth }) => {
 
       if (resultFromGoogle) {
         const res = await axios.post(
-          "http://localhost:3000/sign-with-google",
+          "https://keisneaker-8da6.onrender.com/sign-with-google",
           {
             email: resultFromGoogle.user.email,
             username: resultFromGoogle.user.displayName,

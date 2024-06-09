@@ -58,7 +58,7 @@ const Order = () => {
     try {
       setShowLoad(true);
       const res = await axios.get(
-        `http://localhost:3000/order/getOrders?name=${searchTerm}&date=${chooseDate}&order=${order}&startIndex=${orders.length}`,
+        `https://keisneaker-8da6.onrender.com/order/getOrders?name=${searchTerm}&date=${chooseDate}&order=${order}&startIndex=${orders.length}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -81,7 +81,7 @@ const Order = () => {
       try {
         setShowLoad(true);
         const res = await axios.get(
-          `http://localhost:3000/order/getOrders?name=${searchTerm}&date=${chooseDate}&status=${orderSta}&order=${order}`,
+          `https://keisneaker-8da6.onrender.com/order/getOrders?name=${searchTerm}&date=${chooseDate}&status=${orderSta}&order=${order}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -110,7 +110,7 @@ const Order = () => {
   const deleteUserHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/product/deleteProduct/${deleteItem}`,
+        `https://keisneaker-8da6.onrender.com/product/deleteProduct/${deleteItem}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -129,7 +129,7 @@ const Order = () => {
   const hadleSubmit = async (id, status, name, email, products) => {
     try {
       const updateStatus = await axios.put(
-        "http://localhost:3000/order/updateStatus",
+        "https://keisneaker-8da6.onrender.com/order/updateStatus",
         { id, status },
         {
           headers: { "Content-Type": "application/json" },

@@ -13,7 +13,7 @@ const Card = ({ setShowCard, data, showCard, setClickData, setShowAuth }) => {
   useEffect(() => {
     const fetchUser = async () => {
       const rest = await axios.get(
-        `http://localhost:3000/user/getUsers?userId=${currentUser?._id}`
+        `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${currentUser?._id}`
       );
       if (rest.status == 200) {
         setUser(rest.data.users[0]);
@@ -28,7 +28,7 @@ const Card = ({ setShowCard, data, showCard, setClickData, setShowAuth }) => {
 
     try {
       const resData = await axios.put(
-        `http://localhost:3000/user/addWatchlist`,
+        `https://keisneaker-8da6.onrender.com/user/addWatchlist`,
         { postId: id, userId: currentUser?._id },
         {
           headers: { "Content-Type": "application/json" },

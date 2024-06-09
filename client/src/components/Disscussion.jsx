@@ -19,7 +19,7 @@ const Disscussion = ({
     }
     try {
       const likeResult = await axios.put(
-        "http://localhost:3000/product/likeComment",
+        "https://keisneaker-8da6.onrender.com/product/likeComment",
         { commentId: id, userId: currentUser._id },
         {
           headers: { "Content-Type": "application/json" },
@@ -48,7 +48,7 @@ const Disscussion = ({
     }
     try {
       const likeResult = await axios.put(
-        "http://localhost:3000/product/unLikeComment",
+        "https://keisneaker-8da6.onrender.com/product/unLikeComment",
         { commentId: id, userId: currentUser._id },
         {
           headers: { "Content-Type": "application/json" },
@@ -75,7 +75,7 @@ const Disscussion = ({
   const deleteComment = async (id) => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/product/deleteComment/${id}`,
+        `https://keisneaker-8da6.onrender.com/product/deleteComment/${id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const Disscussion = ({
   const editHandler = async (id, text) => {
     try {
       const res = await axios.put(
-        "http://localhost:3000/product/editComment",
+        "https://keisneaker-8da6.onrender.com/product/editComment",
         {
           id: id,
           editText: text,
@@ -123,7 +123,7 @@ const Disscussion = ({
   const submitReply = async (id, text) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/addReply",
+        "https://keisneaker-8da6.onrender.com/product/addReply",
         {
           id: id,
           reply: text,
@@ -153,7 +153,7 @@ const Disscussion = ({
 
   const deleteReply= async(commentId , id)=>{
     try {
-      const res = await axios.get(`http://localhost:3000/product/deleteReply/${id}?commentId=${commentId}`,{
+      const res = await axios.get(`https://keisneaker-8da6.onrender.com/product/deleteReply/${id}?commentId=${commentId}`,{
         headers : {'Content-Type' : 'application/json'},
         withCredentials : true
       })

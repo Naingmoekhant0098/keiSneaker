@@ -15,7 +15,7 @@ const Reply = ({data,deleteReply,cmtId , submitReply}) => {
     const [reply,setReply]=useState('')
     useEffect(()=>{
         const fetchReply =async()=>{
-            const res = await axios.get(`http://localhost:3000/product/getReply/${data}`,{
+            const res = await axios.get(`https://keisneaker-8da6.onrender.com/product/getReply/${data}`,{
                 headers : {'Content-Type' : 'application/json'},
                 withCredentials : true
             })
@@ -31,7 +31,7 @@ fetchReply();
         const fetchUser = async () => {
           try {
             const res = await axios.get(
-              `http://localhost:3000/user/getUsers?userId=${replies?.userId            }`,
+              `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${replies?.userId            }`,
               {
                 headers: { "Content-Type": "application/json" },
                 withCredentials: true,
@@ -52,7 +52,7 @@ const likeReply =async(id)=>{
       }
       try {
         const likeResult = await axios.put(
-          "http://localhost:3000/product/likeReply",
+          "https://keisneaker-8da6.onrender.com/product/likeReply",
           { commentId: id, userId: currentUser._id },
           {
             headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ const unlikeReply=async(id)=>{
       }
       try {
         const likeResult = await axios.put(
-          "http://localhost:3000/product/unLikeReply",
+          "https://keisneaker-8da6.onrender.com/product/unLikeReply",
           { commentId: id, userId: currentUser._id },
           {
             headers: { "Content-Type": "application/json" },
@@ -99,7 +99,7 @@ const  editHandler=async(id)=>{
   
   try {
     const likeResult = await axios.put(
-      "http://localhost:3000/product/editReply",
+      "https://keisneaker-8da6.onrender.com/product/editReply",
       { replyId: id, text : editText},
       {
         headers: { "Content-Type": "application/json" },

@@ -11,7 +11,7 @@ const TableRev = ({ data, index, hadleSubmit }) => {
   useEffect(() => {
     const fetchUser = async () => {
       const rest = await axios.get(
-        `http://localhost:3000/user/getUsers?userId=${data.userId}`
+        `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${data.userId}`
       );
       if (rest.status == 200) {
         setUser(rest.data.users[0]);

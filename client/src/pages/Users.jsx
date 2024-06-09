@@ -50,7 +50,7 @@ const Users = () => {
     try {
       setShowLoad(true);
       const res = await axios.get(
-        `http://localhost:3000/user/getUsers?username=${searchTerm}&date=${chooseDate}&order=${order}&startIndex=${users.length}`,
+        `https://keisneaker-8da6.onrender.com/user/getUsers?username=${searchTerm}&date=${chooseDate}&order=${order}&startIndex=${users.length}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -74,7 +74,7 @@ const Users = () => {
       try {
         setShowLoad(true);
         const res = await axios.get(
-          `http://localhost:3000/user/getUsers?username=${searchTerm}&date=${chooseDate}&order=${order}`,
+          `https://keisneaker-8da6.onrender.com/user/getUsers?username=${searchTerm}&date=${chooseDate}&order=${order}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -105,7 +105,7 @@ const Users = () => {
   const deleteUserHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/user/deleteUser/${deleteItem}`,
+        `https://keisneaker-8da6.onrender.com/user/deleteUser/${deleteItem}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,

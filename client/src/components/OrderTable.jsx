@@ -12,7 +12,7 @@ const OrderTable = ({ data }) => {
     const fetchData = async () => {
       try {
         const ress = await axios.get(
-          `http://localhost:3000/order/getOrders?orderId=${data}`,
+          `https://keisneaker-8da6.onrender.com/order/getOrders?orderId=${data}`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,

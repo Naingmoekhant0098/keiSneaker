@@ -52,7 +52,7 @@ const NewArr = ({setShowAuth}) => {
     const serchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getProducts?&order='desc'&limit=10`,
+          `https://keisneaker-8da6.onrender.com/product/getProducts?&order='desc'&limit=10`,
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
@@ -70,7 +70,7 @@ const NewArr = ({setShowAuth}) => {
  
   return (
     <div>
-      <div className=" max-w-7xl mx-auto p-3 flex flex-col mb-10 mt-10 md:px-0 px-5">
+      <div className=" max-w-7xl mx-auto p-3 flex flex-col mb-10 mt-10 md:px-2 px-5">
         <div className=" flex  mb-6 items-center justify-between">
           <h1 className=" text-xl md:text-3xl font-semibold uppercase">
             New Arrival

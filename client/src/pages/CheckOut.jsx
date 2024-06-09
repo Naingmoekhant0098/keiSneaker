@@ -35,7 +35,7 @@ const CheckOut = () => {
     }
 
     try {
-        const session = await axios.post('http://localhost:3000/product/checkout-session',body ,{
+        const session = await axios.post('https://keisneaker-8da6.onrender.com/product/checkout-session',body ,{
             headers : {'Content-Type' : 'application/json'}
         })
   

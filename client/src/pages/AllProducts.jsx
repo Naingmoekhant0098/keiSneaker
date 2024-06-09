@@ -45,7 +45,7 @@ const AllProducts = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const rest = await axios.get(
-        `http://localhost:3000/user/getUsers?userId=${currentUser?._id}`
+        `https://keisneaker-8da6.onrender.com/user/getUsers?userId=${currentUser?._id}`
       );
       if (rest.status == 200) {
         setUser(rest.data.users[0]);
@@ -60,7 +60,7 @@ const AllProducts = () => {
 
     try {
       const resData = await axios.put(
-        `http://localhost:3000/user/addWatchlist`,
+        `https://keisneaker-8da6.onrender.com/user/addWatchlist`,
         { postId: id, userId: currentUser?._id },
         {
           headers: { "Content-Type": "application/json" },
@@ -122,7 +122,7 @@ const AllProducts = () => {
       const searchQuery = cat.toString();
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getProducts?${searchQuery}&order=${orderOrder}&limit=12`
+          `https://keisneaker-8da6.onrender.com/product/getProducts?${searchQuery}&order=${orderOrder}&limit=12`
         );
 
         if (res.status === 200) {
@@ -145,7 +145,7 @@ const AllProducts = () => {
     try {
       const searchQuery = cat.toString();
       const res = await axios.get(
-        `http://localhost:3000/product/getProducts?${searchQuery}&order=${orderOrder}&startIndex=${shoes.length}`,
+        `https://keisneaker-8da6.onrender.com/product/getProducts?${searchQuery}&order=${orderOrder}&startIndex=${shoes.length}`,
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,

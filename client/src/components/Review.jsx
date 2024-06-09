@@ -18,7 +18,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
     const fetchReveiw = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/product/getReview?postId=${data._id}&isSubmit=submited`
+          `https://keisneaker-8da6.onrender.com/product/getReview?postId=${data._id}&isSubmit=submited`
         );
         
 
@@ -42,7 +42,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
     }
     try {
       const likeResult = await axios.put(
-        "http://localhost:3000/product/likeReview",
+        "https://keisneaker-8da6.onrender.com/product/likeReview",
         { reviewId: id, userId: currentUser._id },
         {
           headers: { "Content-Type": "application/json" },
@@ -68,7 +68,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
     }
     try {
       const likeResult = await axios.put(
-        "http://localhost:3000/product/unLikeReview",
+        "https://keisneaker-8da6.onrender.com/product/unLikeReview",
         { reviewId: id, userId: currentUser._id },
         {
           headers: { "Content-Type": "application/json" },
