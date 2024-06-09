@@ -60,8 +60,8 @@ const CheckOut = () => {
     <div className=" mt-28  w-full px-5 md:max-w-6xl mx-auto  flex flex-col ">
       <div className=" text-2xl md:text-3xl uppercase font-semibold " style={{letterSpacing:1.5}}>Shipping & Delivery</div>
 
-      <div className=" flex  w-full mt-6 flex-col md:flex-row  gap-3">
-        <div className="w-full md:w-2/3 flex flex-col gap-4">
+      <div className=" flex  w-full mt-6 flex-col md:flex-row  gap-3 ">
+        <div className="w-full md:w-2/3 flex flex-col gap-4 bg-white p-5 rounded-lg">
             <form className=" flex flex-col gap-4" onSubmit={saveCheckOut}>
                 <TextInput placeholder="First Name" className=" " onChange={(e)=>setFormData({...formData , firstName : e.target.value})} required/>
                 <TextInput placeholder="Last Name" onChange={(e)=>setFormData({...formData , lastName : e.target.value})} required/>

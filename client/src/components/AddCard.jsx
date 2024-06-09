@@ -72,7 +72,7 @@ const AddCard = ({setShowCard,clickData}) => {
       style={{ background: "rgba(0,0,0,0.3)" }}
        
     >
-      <div className="w-full  md:max-w-[900px] md:max-h-[500px]  bg-white p-3 flex">
+      <div className="w-full  md:max-w-[900px] md:max-h-[600px]  bg-white p-3 flex">
         <div className=" w-1/2 max:h-[450px]" >
           <Swiper
 

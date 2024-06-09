@@ -771,8 +771,8 @@ exports.checkoutSec = async (req, res, next) => {
     payment_method_types: ["card"],
     line_items: lineItem,
     mode: "payment",
-    success_url: "http://localhost:5173/success",
-    cancel_url: "http://localhost:5173/cancle",
+    success_url: "https://keisneaker-8da6.onrender.com/success",
+    cancel_url: "https://keisneaker-8da6.onrender.com/cancel",
   });
 
   const order = new Order({

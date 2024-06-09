@@ -34,7 +34,7 @@ const dispatch = useDispatch();
   return (
     <div className=" flex w-full gap-6">
       <div className=" flex items-center gap-3">
-        <Checkbox />
+       
         <div>
           <img
             src={data?.photos[0]}
@@ -62,7 +62,7 @@ const dispatch = useDispatch();
               <span> Color :</span> {data?.color}
             </div>
           </div>
-          <div>
+          <div className=" flex items-center justify-between">
             <div className="flex items-center gap-2 border p-1 md:p-2 w-20 md:w-28 ">
               <FaMinus
                 className=" cursor-pointer p-[3px]"
@@ -92,11 +92,24 @@ const dispatch = useDispatch();
                 }}
               />
             </div>
+
+            <div className=" block md:hidden font-medium text-[14px]">
+            <span
+              className={` ${
+                data?.isOnSale && "line-through opacity-70 text-sm"
+              }`}
+            >
+              ${data?.price * data?.qty}
+            </span>
+            {data?.isOnSale && (
+              <span className="ms-3">${data?.onSalePrice * data?.qty}</span>
+            )}
+          </div>
           </div>
         </div>
 
-        <div className=" flex items-center justify-between mt-2 md:mt-6">
-          <div className=" uppercase font-normal cursor-pointer underline text-[14px]">Move to the wishlist</div>
+        <div className="hidden md:flex  items-center justify-between mt-2 md:mt-6">
+          <div className="  uppercase font-normal cursor-pointer underline text-[14px]">Move to the wishlist</div>
           <div className="font-medium text-[14px]">
             <span
               className={` ${
