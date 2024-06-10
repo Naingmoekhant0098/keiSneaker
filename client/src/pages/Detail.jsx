@@ -66,7 +66,7 @@ const Detail = ({ setShowAuth }) => {
 
     try {
       const resData = await axios.put(
-        `http://localhost:3000/user/addWatchlist`,
+        `https://keisneaker-8da6.onrender.com/user/addWatchlist`,
         { postId: id, userId: currentUser?._id },
         {
           headers: { "Content-Type": "application/json" },
