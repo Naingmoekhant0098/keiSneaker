@@ -62,7 +62,7 @@ const ReviewBox = ({ setShowCard, data }) => {
   const submitReview = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/addReview",
+        "https://keisneaker-8da6.onrender.com/product/addReview",
         {
           ...reviewData,
           photo: tempFile,
