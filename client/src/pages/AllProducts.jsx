@@ -909,12 +909,15 @@ const AllProducts = ({setShowAuth}) => {
               );
             })}
           </div>
-         {
+      
+</div>
+<div className="w-full h-12   flex items-center justify-center">
+       {
           loadMore &&  <div className=" text-center text-sm cursor-pointer mt-4" onClick={loadMoreHandler}>
           Load More
         </div>
          }
-</div>
+       </div>
         </div>
       </div>
       {showCard && <AddCard setShowCard={setShowCard} clickData={clickData} />}

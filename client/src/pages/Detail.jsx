@@ -257,7 +257,7 @@ const Detail = ({ setShowAuth }) => {
           <div className=" mt-2 text-[12px] font-semibold text-gray-500 capitalize">
             {data?.category}    {data?.heigh} shoe
           </div>
-          <div className=" w-full md:w-3/4 mt-2 text-sm font-medium ">
+          <div className=" w-full md:w-3/4 mt-2 text-sm font-normal ">
             {data?.short_description}
           </div>
 
@@ -278,7 +278,7 @@ const Detail = ({ setShowAuth }) => {
           </div>
 
           <div className=" w-full md:w-3/4 flex items-center justify-between  mt-6 text-sm font-normal ">
-            <span className="text-gray-600">Select Size</span>
+            <span className="text-sm font-normal">Select Size</span>
             <span
               onClick={() => setSize(true)}
               className=" cursor-default flex items-center gap-2 border-b-2 border-black"
@@ -286,7 +286,7 @@ const Detail = ({ setShowAuth }) => {
               <RxRulerHorizontal className="text-xl" /> <span>Size Guide</span>
             </span>
           </div>
-          <div className=" w-full md:w-3/4  mt-3 flex flex-wrap gap-2 pl-0 px-4">
+          <div className=" w-full md:w-3/4  mt-4 flex flex-wrap gap-2 pl-0 px-4">
             {data?.sizes &&
               data?.sizes.map((siz, index) => {
                 return (
@@ -301,7 +301,7 @@ const Detail = ({ setShowAuth }) => {
               })}
           </div>
 
-          <div className="  mt-6 text-sm font-normal text-gray-600">
+          <div className="  mt-6 text-sm font-normal">
             Pick a Quantity
           </div>
         <div className=" flex items-center gap-4">
