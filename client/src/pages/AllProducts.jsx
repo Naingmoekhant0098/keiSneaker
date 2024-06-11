@@ -90,18 +90,18 @@ const AllProducts = ({ setShowAuth }) => {
   useEffect(() => {
     // setSearchParams({ ...searchParams, category: cat.get("category") });
 
-    if (
-      cat.get("category") ||
-      cat.get("brands") ||
-      cat.get("activity") ||
-      cat.get("colors") ||
-      cat.get("collections") ||
-      cat.get("heights") ||
-      cat.get("price") ||
-      cat.get("genders") ||
-      cat.get("sizes") ||
-      cat.get("searchTerm")
-    ) {
+    // if (
+    //   cat.get("category") ||
+    //   cat.get("brands") ||
+    //   cat.get("activity") ||
+    //   cat.get("colors") ||
+    //   cat.get("collections") ||
+    //   cat.get("heights") ||
+    //   cat.get("price") ||
+    //   cat.get("genders") ||
+    //   cat.get("sizes") ||
+    //   cat.get("searchTerm")
+    // ) {
       setSearchParams({
         ...searchParams,
         category: cat.get("category")?.split(",") || [cat.get("category")],
@@ -114,7 +114,7 @@ const AllProducts = ({ setShowAuth }) => {
         searchTerm: cat.get("searchTerm"),
         sizes: cat.get("sizes")?.split(",") || [],
       });
-    }
+   // }
   }, [location.search]);
 
   useEffect(() => {
@@ -268,6 +268,7 @@ const AllProducts = ({ setShowAuth }) => {
   const navigate = useNavigate();
   const onChange = (e, val) => {
     if (e.target.id == "activities") {
+     
       setSearchParams({
         ...searchParams,
         activity: val,
@@ -277,6 +278,7 @@ const AllProducts = ({ setShowAuth }) => {
     }
 
     if (e.target.id === "gender") {
+      
       if (e.target.checked) {
         setSearchParams({
           ...searchParams,
@@ -291,11 +293,13 @@ const AllProducts = ({ setShowAuth }) => {
       } else {
         setSearchParams({
           ...searchParams,
-          category: searchParams.category.filter((t) => t !== e.target.value),
+          category : searchParams?.category.filter((t) => t !== e.target.value),
         });
-        const deletedData = searchParams.category.filter(
+        const deletedData = searchParams?.category.filter(
           (t) => t !== e.target.value
         );
+
+   
         if (deletedData.length > 0) {
           cat.set("category", deletedData.join(","));
         } else {
@@ -691,7 +695,7 @@ const AllProducts = ({ setShowAuth }) => {
                       id="price"
                       onClick={onChange}
                       value={"0-25"}
-                      defaultChecked={searchParams?.prices === "0-25"}
+                      checked={selectedPrice === "0-25"}
                     />
                     <span>$0 - $25</span>
                   </div>
@@ -702,7 +706,7 @@ const AllProducts = ({ setShowAuth }) => {
                       id="price"
                       onClick={onChange}
                       value={"25-50"}
-                      defaultChecked={searchParams?.prices === "25-50" && true}
+                      checked={selectedPrice === "25-50"}
                     />
                     <span> $25 - $50</span>
                   </div>
@@ -713,7 +717,7 @@ const AllProducts = ({ setShowAuth }) => {
                       id="price"
                       onClick={onChange}
                       value={"50-100"}
-                      defaultChecked={searchParams?.prices === "50-100"}
+                      checked={selectedPrice === "50-100"}
                     />
                     <span>$50 - $100</span>
                   </div>
@@ -724,7 +728,7 @@ const AllProducts = ({ setShowAuth }) => {
                       id="price"
                       onClick={onChange}
                       value={"100-150"}
-                      defaultChecked={searchParams?.prices === "100-150"}
+                      defaultChecked={selectedPrice === "100-150"}
                     />
                     <span>$100 - $150</span>
                   </div>
@@ -735,7 +739,7 @@ const AllProducts = ({ setShowAuth }) => {
                       id="price"
                       onClick={onChange}
                       value={"150-250"}
-                      defaultChecked={searchParams?.prices === "150-250"}
+                      checked={selectedPrice === "150-250"}
                     />
                     <span>$150 - $250 </span>
                   </div>
@@ -749,7 +753,7 @@ const AllProducts = ({ setShowAuth }) => {
             >
               <Accordion.Panel>
                 <Accordion.Title className=" p-0 focus:ring-0 bg-transparent  hover:bg-transparent text-black">
-                  Brand
+                  Brands
                 </Accordion.Title>
                 <Accordion.Content className=" border-0 p-0">
                   {brands.map((cot, index) => {
@@ -971,7 +975,7 @@ const AllProducts = ({ setShowAuth }) => {
                   id="price"
                   onClick={onChange}
                   value={"0-25"}
-                  defaultChecked={searchParams?.prices === "0-25"}
+                  checked={selectedPrice === "0-25"}
                 />
                 <span>$0 - $25</span>
               </div>
@@ -982,7 +986,7 @@ const AllProducts = ({ setShowAuth }) => {
                   id="price"
                   onClick={onChange}
                   value={"25-50"}
-                  defaultChecked={searchParams?.prices === "25-50" && true}
+                  checked={selectedPrice === "25-50" && true}
                 />
                 <span> $25 - $50</span>
               </div>
@@ -993,7 +997,7 @@ const AllProducts = ({ setShowAuth }) => {
                   id="price"
                   onClick={onChange}
                   value={"50-100"}
-                  defaultChecked={searchParams?.prices === "50-100"}
+                  checked={selectedPrice === "50-100"}
                 />
                 <span>$50 - $100</span>
               </div>
@@ -1004,7 +1008,7 @@ const AllProducts = ({ setShowAuth }) => {
                   id="price"
                   onClick={onChange}
                   value={"100-150"}
-                  defaultChecked={searchParams?.prices === "100-150"}
+                  checked={selectedPrice === "100-150"}
                 />
                 <span>$100 - $150</span>
               </div>
@@ -1015,7 +1019,7 @@ const AllProducts = ({ setShowAuth }) => {
                   id="price"
                   onClick={onChange}
                   value={"150-250"}
-                  defaultChecked={searchParams?.prices === "150-250"}
+                  checked={selectedPrice === "150-250"}
                 />
                 <span>$150 - $250 </span>
               </div>
