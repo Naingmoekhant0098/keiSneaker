@@ -110,8 +110,8 @@ const Home = ({ setShowAuth }) => {
               </Link>
             </div>
           </div>
-          <div className="w-full md:w-[900px] flex items-center justify-center md:justify-between  md:right-64 bottom-0 absolute md:gap-8  ">
-            <div className=" flex font-medium text-center mr-12 md:mr-0 ">
+          <div className="w-full md:w-[900px] overflow-x-hidden  flex items-center justify-center md:justify-between  right-0  md:right-64 bottom-0 absolute md:gap-8  ">
+            <div className=" flex font-medium text-center md:mr-0 ">
               <span>0{currentSlide + 1}</span>
               <span>-</span>
               <span>0{shoes.length}</span>

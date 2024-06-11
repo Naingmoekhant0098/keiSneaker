@@ -22,7 +22,7 @@ import { RxCross2 } from "react-icons/rx";
 import AddCard from "../components/AddCard";
 import { useSelector } from "react-redux";
 
-const AllProducts = ({setShowAuth}) => {
+const AllProducts = ({ setShowAuth }) => {
   const { currentUser } = useSelector((state) => state.user);
   const [shoes, setShoes] = useState(null);
   const [showCard, setShowCard] = useState(false);
@@ -40,7 +40,7 @@ const AllProducts = ({setShowAuth}) => {
   const [total, setProuducts] = useState(0);
   const handleClose = () => setIsOpen(false);
   const [user, setUser] = useState(null);
-  const [loadMore , setLoadMore] = useState(true)
+  const [loadMore, setLoadMore] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -128,11 +128,10 @@ const AllProducts = ({setShowAuth}) => {
         if (res.status === 200) {
           setShoes(res.data.shoes);
           setProuducts(res.data.totalProducts);
-          if(res.data.shoes.length < 12){
-            setLoadMore(false)
-            
-          }else{
-            setLoadMore(true)
+          if (res.data.shoes.length < 12) {
+            setLoadMore(false);
+          } else {
+            setLoadMore(true);
           }
         }
       } catch (error) {}
@@ -141,7 +140,6 @@ const AllProducts = ({setShowAuth}) => {
   }, [location.search, orderOrder]);
 
   const loadMoreHandler = async () => {
-    
     try {
       const searchQuery = cat.toString();
       const res = await axios.get(
@@ -154,11 +152,10 @@ const AllProducts = ({setShowAuth}) => {
 
       if (res.status === 200) {
         setShoes((prev) => [...prev, ...res.data.shoes]);
-        ;
-        if(res.data.shoes.length < 12){
-          setLoadMore(false)
-        }else{
-          setLoadMore(true)
+        if (res.data.shoes.length < 12) {
+          setLoadMore(false);
+        } else {
+          setLoadMore(true);
         }
       }
     } catch (error) {}
@@ -410,7 +407,6 @@ const AllProducts = ({setShowAuth}) => {
       }
     }
     if (e.target.id === "heigh") {
-       
       if (e.target.checked) {
         setSearchParams({
           ...searchParams,
@@ -599,7 +595,9 @@ const AllProducts = ({setShowAuth}) => {
                           id="gender"
                           onClick={onChange}
                           value={cot.value}
-                          defaultChecked={searchParams?.category?.includes(cot.value)}
+                          defaultChecked={searchParams?.category?.includes(
+                            cot.value
+                          )}
                         />
                         {cot.value}
                       </div>
@@ -622,9 +620,8 @@ const AllProducts = ({setShowAuth}) => {
                     {options &&
                       options.map((color, index) => {
                         return (
-                          <div  key={index}>
+                          <div key={index}>
                             <div
-                             
                               id="colors"
                               onClick={(e) => {
                                 onChange(e, color.value);
@@ -766,7 +763,9 @@ const AllProducts = ({setShowAuth}) => {
                           id="brand"
                           onClick={onChange}
                           value={cot.value}
-                          defaultChecked={searchParams?.brands?.includes(cot.value)}
+                          defaultChecked={searchParams?.brands?.includes(
+                            cot.value
+                          )}
                         />
                         {cot.value}
                       </div>
@@ -838,86 +837,88 @@ const AllProducts = ({setShowAuth}) => {
               </Accordion.Panel>
             </Accordion>
           </div>
-<div>
+          <div>
+            <div className=" w-full h-full md:pl-6 grid grid-cols-2 md:grid-cols-4 md:flex-1 gap-4 md:gap-5  ">
+              {shoes?.map((data, index) => {
+                return (
+                  <div key={index} className="  md:w-72  cursor-pointer">
+                    <div className=" relative group ">
+                      <Link to={`/shop/${data?.slug}`}>
+                        <img
+                          src={data?.photos[0]}
+                          alt=""
+                          className="w-full h-[250px] md:h-[350px] object-cover"
+                        />
 
-          <div className=" w-full h-full md:pl-6 grid grid-cols-2 md:grid-cols-4 md:flex-1 gap-4 md:gap-5  ">
-            {shoes?.map((data, index) => {
-              return (
-                <div key={index} className="  md:w-72  cursor-pointer">
-                  <div className=" relative group ">
-                    <Link to={`/shop/${data?.slug}`}>
-                      <img
-                        src={data?.photos[0]}
-                        alt=""
-                        className="w-full h-[250px] md:h-[350px] object-cover"
-                      />
-
-                      <img
-                        src={data?.photos[1]}
-                        alt=""
-                        className="w-full h-full object-cover transition duration-500 absolute top-0 opacity-0 group-hover:opacity-100"
-                      />
-                    </Link>
-                    <HiOutlineHeart
-                      className={` rounded-full p-[2px]  absolute top-3 right-3 text-2xl transition duration-500 cursor-pointer md:hover:scale-125 ${
-                        user &&
-                        user?.watchLists?.includes(data?._id) &&
-                        " bg-black text-white"
-                      }`}
-                      onClick={() => addToWatchList(data?._id)}
-                    />
-                    <div className=" hidden md:block">
-                      <span
-                        className="absolute   transition duration-500  bottom-3 right-5 flex items-center gap-2  px-2 py-2 opacity-0 group-hover:opacity-100 bg-white hover:bg-black hover:text-white
-                  "
-                        onClick={() => {
-                          setShowCard(true), setClickData(data);
-                        }}
-                      >
-                        <span className=" border-r-2 border-gray-500 px-2 text-sm font-medium">
-                          Add To Bag
-                        </span>
-
-                        <HiOutlineShoppingBag className="  text-xl cursor-pointer " />
-                      </span>
-                    </div>
-                  </div>
-                  <div className=" px-2">
-                    <div className=" mt-2 text-[16px] font-semibold w-full text-wrap hover:underline cursor-pointer line-clamp-2">
-                      {data?.name}
-                    </div>
-                    <div className=" mt-1 text-sm font-medium text-gray-900">
-                      <span
-                        className={` ${
-                          data?.isOnSale && "line-through opacity-70 text-sm"
+                        <img
+                          src={data?.photos[1]}
+                          alt=""
+                          className="w-full h-full object-cover transition duration-500 absolute top-0 opacity-0 group-hover:opacity-100"
+                        />
+                      </Link>
+                      <HiOutlineHeart
+                        className={` rounded-full p-[2px]  absolute top-3 right-3 text-2xl transition duration-300 cursor-pointer md:hover:scale-125 ${
+                          user &&
+                          user?.watchLists?.includes(data?._id) &&
+                          " bg-black text-white"
                         }`}
-                      >
-                        ${data?.price}
-                      </span>
-                      {data?.isOnSale && (
-                        <span className="ms-3">${data?.onSalePrice}</span>
-                      )}
+                        onClick={() => addToWatchList(data?._id)}
+                      />
+                      <div className=" hidden md:block">
+                        <span
+                          className="absolute   transition duration-500  bottom-3 right-5 flex items-center gap-2  px-2 py-2 opacity-0 group-hover:opacity-100 bg-white hover:bg-black hover:text-white
+                  "
+                          onClick={() => {
+                            setShowCard(true), setClickData(data);
+                          }}
+                        >
+                          <span className=" border-r-2 border-gray-500 px-2 text-sm font-medium">
+                            Add To Bag
+                          </span>
+
+                          <HiOutlineShoppingBag className="  text-xl cursor-pointer " />
+                        </span>
+                      </div>
                     </div>
-                    <div
-                      className="  mt-1 font-medium text-gray-600 uppercase"
-                      style={{ fontSize: "10px" }}
-                    >
-                      {data?.category} {data?.heigh} shoe
+                    <div className=" px-2">
+                      <div className=" mt-2 text-[16px] font-semibold w-full text-wrap hover:underline cursor-pointer line-clamp-2">
+                        {data?.name}
+                      </div>
+                      <div className=" mt-1 text-sm font-medium text-gray-900">
+                        <span
+                          className={` ${
+                            data?.isOnSale && "line-through opacity-70 text-sm"
+                          }`}
+                        >
+                          ${data?.price}
+                        </span>
+                        {data?.isOnSale && (
+                          <span className="ms-3">${data?.onSalePrice}</span>
+                        )}
+                      </div>
+                      <div
+                        className="  mt-1 font-medium text-gray-600 uppercase"
+                        style={{ fontSize: "10px" }}
+                      >
+                        {data?.category} {data?.heigh} shoe
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            <div className="w-full h-12   flex items-center justify-center">
+            {loadMore && (
+              <div
+                className=" text-center text-sm cursor-pointer mt-4"
+                onClick={loadMoreHandler}
+              >
+                Load More
+              </div>
+            )}
           </div>
-      
-</div>
-<div className="w-full h-12   flex items-center justify-center">
-       {
-          loadMore &&  <div className=" text-center text-sm cursor-pointer mt-4" onClick={loadMoreHandler}>
-          Load More
-        </div>
-         }
-       </div>
+          </div>
+         
         </div>
       </div>
       {showCard && <AddCard setShowCard={setShowCard} clickData={clickData} />}
@@ -951,7 +952,9 @@ const AllProducts = ({setShowAuth}) => {
                       id="gender"
                       onClick={onChange}
                       value={cot.value}
-                      defaultChecked={searchParams?.category?.includes(cot.value)}
+                      defaultChecked={searchParams?.category?.includes(
+                        cot.value
+                      )}
                     />
                     {cot.label}
                   </div>
@@ -1032,7 +1035,9 @@ const AllProducts = ({setShowAuth}) => {
                       id="collections"
                       onClick={onChange}
                       value={cot.value}
-                      defaultChecked={searchParams?.collections?.includes(cot.value)}
+                      defaultChecked={searchParams?.collections?.includes(
+                        cot.value
+                      )}
                     />
                     {cot.label}
                   </div>
@@ -1132,7 +1137,9 @@ const AllProducts = ({setShowAuth}) => {
                       id="heigh"
                       onClick={onChange}
                       value={cot.value}
-                      defaultChecked={searchParams?.heights?.includes(cot.value)}
+                      defaultChecked={searchParams?.heights?.includes(
+                        cot.value
+                      )}
                     />
                     {cot.value}
                   </div>

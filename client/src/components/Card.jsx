@@ -68,7 +68,7 @@ const Card = ({ setShowCard, data, showCard, setClickData, setShowAuth }) => {
           </div>
         )}
         <HiOutlineHeart
-          className={` rounded-full p-[2px]  absolute top-3 right-3 text-2xl transition duration-500 cursor-pointer md:hover:scale-125 ${
+          className={` rounded-full p-[2px]  absolute top-3 right-3 text-2xl transition duration-300 cursor-pointer md:hover:scale-125 ${
             user && user?.watchLists?.includes(data?._id) && " bg-black text-white"
           }`}
           onClick={() => addToWatchList(data?._id)}
