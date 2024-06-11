@@ -837,7 +837,7 @@ const AllProducts = ({ setShowAuth }) => {
               </Accordion.Panel>
             </Accordion>
           </div>
-          <div>
+          <div className="w-full">
             <div className=" w-full h-full md:pl-6 grid grid-cols-2 md:grid-cols-4 md:flex-1 gap-4 md:gap-5  ">
               {shoes?.map((data, index) => {
                 return (
@@ -907,10 +907,10 @@ const AllProducts = ({ setShowAuth }) => {
                 );
               })}
             </div>
-            <div className="w-full h-12   flex items-center justify-center">
+            <div className="w-full  mt-6    flex items-center justify-center">
             {loadMore && (
               <div
-                className=" text-center text-sm cursor-pointer mt-4"
+                className=" text-center text-sm cursor-pointer "
                 onClick={loadMoreHandler}
               >
                 Load More
