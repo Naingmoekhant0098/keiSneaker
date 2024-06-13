@@ -343,7 +343,7 @@ const EditProduct = () => {
             </div>
           </div>
         </div>
-        <div className="text-sm flex gap-6">
+        <div className="text-sm flex gap-6 overflow-x-auto">
           {images?.length > 0 &&
             images?.map((img, index) => {
               return (

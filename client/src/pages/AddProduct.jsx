@@ -240,7 +240,7 @@ const AddProduct = () => {
       >
         <div className="mb-3 flex items-center gap-3 ">
           <div className=" mb-3 flex-1">
-            <Label>Product Name</Label>
+            <Label>Name</Label>
             <TextInput
               className=" mt-2"
               placeholder="Product Name"
@@ -328,7 +328,7 @@ const AddProduct = () => {
             </div>
           </div>
         </div>
-        <div className="text-sm flex gap-6">
+        <div className="text-sm flex gap-6 overflow-x-auto">
           {images?.length > 0 &&
             images?.map((img, index) => {
               return (
