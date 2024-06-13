@@ -182,7 +182,7 @@ const Detail = ({ setShowAuth }) => {
   };
 
   return (
-    <div className="mt-24  w-full md:max-w-7xl mx-auto  flex flex-col">
+    <div className="mt-28  w-full md:max-w-7xl mx-auto  flex flex-col">
       <div className="px-5 md:px-5">
         <Breadcrumb aria-label="Default breadcrumb example">
           <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
