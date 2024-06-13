@@ -52,16 +52,16 @@ const Rev = ({ data ,likeReview , unLikeReview}) => {
           </div>
         </div>
 
-        <div className=" text-lg  font-medium my-1">{data?.headLine}</div>
-        <div className="text-[16px]  font-normal">{data?.comment}</div>
+        <div className="text-sm  font-medium mt-1">{data?.headLine}</div>
+        <div className="text-sm  font-normal">{data?.comment}</div>
         {
             data?.photo && (
-                <img src={data?.photo}  className="mt-3 object-cover h-[300px]"/>
+                <img src={data?.photo}  className="mt-3 object-cover h-[200px]"/>
             )
         }
 
         <div className=" flex items-center gap-5 mt-6">
-          <span className=" text-[16px]">Was this review helpful to you?</span>
+          <span className=" text-sm">Was this review helpful to you?</span>
           <div className=" flex gap-3">
             <div className=" flex items-center gap-2">
               <LuThumbsUp onClick={()=>likeReview(data?._id)} className={`text-2xl cursor-pointer  hover:text-black ${data?.likes.includes(currentUser?._id)?'text-black' : 'text-gray-600'}`}/>
