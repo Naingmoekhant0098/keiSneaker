@@ -76,7 +76,7 @@ const AddProduct = () => {
   ];
   const brands = [
     { value: "nike", label: "Nike" },
-    { value: "addidas", label: "Addidas" },
+    { value: "adidas", label: "Adidas" },
     { value: "H&M", label: "H&M" },
     { value: "vans", label: "Vans" },
     { value: "gucci", label: "Gucci" },

@@ -49,10 +49,10 @@ const EditProduct = () => {
     }
   ];
   const categories = [
-    { value: "Man", label: "Man" },
-    { value: "Woman", label: "Woman" },
-    { value: "Unisex", label: "Unisex" },
-    { value: "Kid", label: "Kid" },
+    { value: "men", label: "Man" },
+    { value: "women", label: "Woman" },
+    { value: "unisex", label: "Unisex" },
+    { value: "kids", label: "Kid" },
   ];
   const collections = [
     { value: "air force 1", label: "Air force 1" },
@@ -71,7 +71,7 @@ const EditProduct = () => {
   ];
   const brands = [
     { value: "nike", label: "Nike" },
-    { value: "addidas", label: "Addidas" },
+    { value: "adidas", label: "Adidas" },
     { value: "H&M", label: "H&M" },
     { value: "vans", label: "Vans" },
     { value: "gucci", label: "Gucci" },
@@ -324,14 +324,7 @@ const EditProduct = () => {
           value={quillData}
           onChange={(e) => setQuillData(e)}
           />
-
-          {/* <Textarea
-            value={data?.description}
-            className=" mt-2"
-            required
-            placeholder="Product Description"
-            onChange={(e) => setData({ ...data, description: e.target.value })}
-          /> */}
+ 
         </div>
         <div className=" mb-3">
           <Label>Choose images</Label>
