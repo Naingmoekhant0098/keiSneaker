@@ -34,7 +34,7 @@ const Review = ({ setShowAuth, data, setShowCard, showCard }) => {
     };
 
     fetchReveiw();
-  }, []);
+  }, [data]);
 
   const likeReview = async (id) => {
     if(!currentUser){
