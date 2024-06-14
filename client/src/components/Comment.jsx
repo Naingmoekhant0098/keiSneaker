@@ -96,7 +96,7 @@ const Comment = ({
             >
               Reply
             </span>
-            {currentUser._id === data?.userId && (
+            {currentUser?._id === data?.userId && (
               <span
                 className=" text-[12px] cursor-pointer font-medium text-slate-500 hover:text-black"
                 onClick={() => setIsEdit(!isEdit)}
@@ -105,7 +105,7 @@ const Comment = ({
               </span>
             )}
 
-            {currentUser._id === data?.userId && (
+            {currentUser?._id === data?.userId && (
               <span
                 className=" text-[12px] cursor-pointer font-medium text-slate-500 hover:text-black"
                 onClick={() => deleteComment(data?._id)}
